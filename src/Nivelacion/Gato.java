@@ -309,11 +309,13 @@ public class Gato extends javax.swing.JFrame {
         presionar(9);
     }//GEN-LAST:event_jLabel9MousePressed
 
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         for (int i = 0; i < lbs.length; i++) {
             lbs[i].setText("");
             lbs[i].setBackground(Color.white);   
+            
         }
         
         turno=siguientejuego;
@@ -325,6 +327,9 @@ public class Gato extends javax.swing.JFrame {
         
         lbturno.setText("Turno de "+turno);
         estado=true;
+        lbturno.setText("Turno de " + turno);
+        estado = true;
+        comprobarEmpate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     
@@ -364,6 +369,21 @@ public class Gato extends javax.swing.JFrame {
             }
                 
             
+        }
+    }
+    
+    public void comprobarEmpate() {
+        boolean empate = true;
+        for (int i = 0; i < lbs.length; i++) {
+            if (lbs[i].getText().equals("")) {
+                empate = false;
+                break;
+            }
+        }
+        if (empate) {
+            lbturno.setText("¡Empate!");
+            estado = false;
+            JOptionPane.showMessageDialog(this, "¡Empate!");
         }
     }
     
