@@ -360,9 +360,9 @@ public class Gato extends javax.swing.JFrame {
                     lbs[vs[i][1]-1].getText().equals("O")&&
                     lbs[vs[i][2]-1].getText().equals("O")){
                 
-                lbs[vs[i][0]-1].setBackground(Color.green);
-                lbs[vs[i][1]-1].setBackground(Color.green);
-                lbs[vs[i][2]-1].setBackground(Color.green);
+                lbs[vs[i][0]-1].setBackground(Color.red);
+                lbs[vs[i][1]-1].setBackground(Color.red);
+                lbs[vs[i][2]-1].setBackground(Color.red);
                 
                 lbturno.setText("Ha Ganado O");
                 estado=false;
